@@ -1,14 +1,14 @@
-import { useContext, CSSProperties } from "react";
-import styles from "../styles/styles.module.css";
-import { ProductContext } from "./ProductCard";
+import { useContext, CSSProperties } from 'react'
+import styles from '../styles/styles.module.css'
+import { ProductContext } from './ProductCard'
 
 export interface Props {
   className?: string;
   style?: CSSProperties;
 }
 
-export const ProductButtons = ({ className, style }: Props) => {
-  const { increaseBy, counter } = useContext(ProductContext);
+export const ProductButtons = ({className, style}: Props): JSX.Element => {
+  const { increaseBy, counter } = useContext(ProductContext)
 
   return (
     <div className={`${styles.buttonsContainer} ${className}`} style={style}>
@@ -20,5 +20,5 @@ export const ProductButtons = ({ className, style }: Props) => {
         +
       </button>
     </div>
-  );
-};
+  )
+}
